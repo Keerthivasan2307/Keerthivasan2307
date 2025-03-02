@@ -1,0 +1,350 @@
+.container {
+  color: #000;
+  background-color: #fff;
+  max-width: 267px;
+  overflow: hidden;
+}
+
+.cardWrapper {
+  background-color: red;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+}
+
+.headerSection {
+  background-color: #ff8c8c;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+  padding-left: 1px;
+  padding-right: 1px;
+  display: flex;
+}
+
+.bikeTitle {
+  align-self: end;
+  font-family:
+    Kurale,
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+}
+
+.emiSection {
+  z-index: 10;
+  align-items: stretch;
+  margin-top: 40px;
+  font-family:
+    Kelly Slab,
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  display: flex;
+}
+
+.emiTextWrapper {
+  z-index: 10;
+  flex-direction: column;
+  margin-top: auto;
+  margin-bottom: auto;
+  display: flex;
+}
+
+.emiStartsText {
+  align-self: start;
+  transform: rotate(-0.332522deg);
+}
+
+.emiAmount {
+  align-self: end;
+  margin-top: 7px;
+}
+
+.bikeImage {
+  aspect-ratio: 0.57;
+  object-fit: contain;
+  object-position: center;
+  flex-shrink: 0;
+  width: 97px;
+}
+
+.detailsSection {
+  background-color: #fff;
+  margin-top: -8px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+.bikeFullImage {
+  aspect-ratio: 1.33;
+  object-fit: contain;
+  object-position: center;
+  width: 100%;
+}
+
+.bikeDescription {
+  margin-top: 7px;
+  font-family:
+    Inter,
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+}
+
+.priceRange {
+  margin-top: 10px;
+  font-family:
+    Inter,
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+}
+
+.footerSection {
+  background-color: #ff0;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 9px;
+  padding: 6px 43px 6px 17px;
+  display: flex;
+}
+
+.visitWebsiteButton {
+  background-color: #fff6f6;
+  border-radius: 28px;
+  align-self: start;
+  padding: 5px 14px 15px;
+  font-family:
+    Kurale,
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  border: none;
+  cursor: pointer;
+}
+
+.socialSection {
+  white-space: nowrap;
+  align-self: end;
+  align-items: stretch;
+  gap: 40px 42px;
+  margin-top: 34px;
+  font-family:
+    Inter,
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  display: flex;
+}
+
+.socialIcon {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  flex-shrink: 0;
+  width: 12px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+"use client";
+
+import React from "react";
+import styles from "./BikeCard.module.css";
+
+interface BikeCardHeaderProps {
+  title: string;
+}
+
+const BikeCardHeader: React.FC<BikeCardHeaderProps> = ({ title }) => {
+  return (
+    <header className={styles.headerSection}>
+      <h1 className={styles.bikeTitle}>{title}</h1>
+    </header>
+  );
+};
+
+export default BikeCardHeader;
+"use client";
+
+import React from "react";
+import styles from "./BikeCard.module.css";
+
+interface BikeCardEmiInfoProps {
+  emiText: string;
+  emiAmount: string;
+  bikeImageUrl: string;
+}
+
+const BikeCardEmiInfo: React.FC<BikeCardEmiInfoProps> = ({
+  emiText,
+  emiAmount,
+  bikeImageUrl,
+}) => {
+  return (
+    <section className={styles.emiSection}>
+      <div className={styles.emiTextWrapper}>
+        <p className={styles.emiStartsText}>{emiText}</p>
+        <p className={styles.emiAmount}>{emiAmount}</p>
+      </div>
+      <img
+        src={bikeImageUrl}
+        alt="Yamaha R15 V4 motorcycle"
+        className={styles.bikeImage}
+      />
+    </section>
+  );
+};
+
+export default BikeCardEmiInfo;
+"use client";
+
+import React from "react";
+import styles from "./BikeCard.module.css";
+
+interface BikeCardDetailsProps {
+  fullImageUrl: string;
+  description: string;
+  priceRange: string;
+}
+
+const BikeCardDetails: React.FC<BikeCardDetailsProps> = ({
+  fullImageUrl,
+  description,
+  priceRange,
+}) => {
+  return (
+    <article className={styles.detailsSection}>
+      <img
+        src={fullImageUrl}
+        alt="Yamaha R15 V4 full view"
+        className={styles.bikeFullImage}
+      />
+      <p className={styles.bikeDescription}>{description}</p>
+      <p
+        className={styles.priceRange}
+        dangerouslySetInnerHTML={{ __html: priceRange }}
+      />
+    </article>
+  );
+};
+
+export default BikeCardDetails;
+"use client";
+
+import React from "react";
+import styles from "./BikeCard.module.css";
+
+interface BikeCardFooterProps {
+  buttonText: string;
+  socialHandle: string;
+  socialIconUrl: string;
+  onVisitWebsite?: () => void;
+}
+
+const BikeCardFooter: React.FC<BikeCardFooterProps> = ({
+  buttonText,
+  socialHandle,
+  socialIconUrl,
+  onVisitWebsite = () => {},
+}) => {
+  return (
+    <footer className={styles.footerSection}>
+      <button
+        className={styles.visitWebsiteButton}
+        onClick={onVisitWebsite}
+        aria-label="Visit website for more information"
+      >
+        {buttonText}
+      </button>
+      <div className={styles.socialSection}>
+        <p>{socialHandle}</p>
+        <img
+          src={socialIconUrl}
+          alt="Social media icon"
+          className={styles.socialIcon}
+        />
+      </div>
+    </footer>
+  );
+};
+
+export default BikeCardFooter;
+"use client";
+
+import React from "react";
+import styles from "./BikeCard.module.css";
+import BikeCardHeader from "./BikeCardHeader";
+import BikeCardEmiInfo from "./BikeCardEmiInfo";
+import BikeCardDetails from "./BikeCardDetails";
+import BikeCardFooter from "./BikeCardFooter";
+
+interface BikeCardProps {
+  onVisitWebsite?: () => void;
+}
+
+const BikeCard: React.FC<BikeCardProps> = ({ onVisitWebsite }) => {
+  // Description text with line breaks
+  const description = `Yamaha R15 V4 is a sports bike available in 6
+variants and 8 colors. The Yamaha R15 V4 is
+powered by 155cc BS6 engine which develops
+a power of 18.1 bhp and a torque of 14.2 Nm.
+With both front and rear disc brakes, Yamaha
+R15 V4 comes up with anti-locking braking
+system. This R15 V4 bike weighs 141 kg and
+has a fuel tank capacity of 11 liters.`;
+
+  // Price range text with formatting
+  const priceRange = `The Yamaha R15 V4 is a sports bike available <br/>
+at a price range of <span style="font-weight: 600;">Rs. 1,84,459 - Rs. 2,11,589</span>`;
+
+  return (
+    <div className={styles.container}>
+      <div className={styles.cardWrapper}>
+        <BikeCardHeader title="R15 V4" />
+
+        <BikeCardEmiInfo
+          emiText="EMI starts from"
+          emiAmount="Rs 5000/."
+          bikeImageUrl="https://cdn.builder.io/api/v1/image/assets/TEMP/90df66ab91b23a848c6941718ea8c5fded4b6df8bfb783c8941bbcbd4e101aff?placeholderIfAbsent=true&apiKey=bd2d397bb31541518f9da939b19b8b0d"
+        />
+
+        <BikeCardDetails
+          fullImageUrl="https://cdn.builder.io/api/v1/image/assets/TEMP/21c68263a5402ade96ec9cdc37416424fdad4e5e584c4427095e3d944d2103c4?placeholderIfAbsent=true&apiKey=bd2d397bb31541518f9da939b19b8b0d"
+          description={description}
+          priceRange={priceRange}
+        />
+
+        <BikeCardFooter
+          buttonText="Visit Website"
+          socialHandle="@r15v4"
+          socialIconUrl="https://cdn.builder.io/api/v1/image/assets/TEMP/10499753c72518c9b776bf509f32ed0d4eb3881750d6b018891cc1a1f180ea7d?placeholderIfAbsent=true&apiKey=bd2d397bb31541518f9da939b19b8b0d"
+          onVisitWebsite={onVisitWebsite}
+        />
+      </div>
+    </div>
+  );
+};
+
+export default BikeCard;
