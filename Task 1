@@ -1,0 +1,308 @@
+"use client";
+import * as React from "react";
+import styles from "./IPhone14Plus1.module.css";
+
+function IPhone14Plus1() {
+  return (
+    <section className={styles.iPhone14Plus1}>
+      <img
+        src="https://cdn.builder.io/api/v1/image/assets/TEMP/937a6c6249388b9cd68e8c25bfc83d4013a2b1d96ec236daa8ac9d3d07720c93?placeholderIfAbsent=true&apiKey=bd2d397bb31541518f9da939b19b8b0d"
+        alt="iPhone 14 Plus"
+        className={styles.img}
+      />
+    </section>
+  );
+}
+
+export default IPhone14Plus1;
+.iPhone14Plus1 {
+  background-color: #fff;
+  width: 100%;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+
+.img {
+  aspect-ratio: 0.46;
+  object-fit: contain;
+  object-position: center;
+  border-radius: 28px;
+  width: 100%;
+}
+.i-phone-14-plus-2,
+.i-phone-14-plus-2 * {
+  box-sizing: border-box;
+}
+.i-phone-14-plus-2 {
+  background: #ffffff;
+  height: 926px;
+  position: relative;
+  overflow: hidden;
+}
+.polygon-1 {
+  border-radius: 0px;
+  width: 724.82px;
+  height: 497.58px;
+  position: absolute;
+  left: 288.98px;
+  top: -322px;
+  transform: translate(-220.53px, 322px);
+  overflow: visible;
+}
+.polygon-2 {
+  border-radius: 0px;
+  width: 964.01px;
+  height: 614.36px;
+  position: absolute;
+  left: 832.81px;
+  top: 616.95px;
+  transform: translate(-832.81px, -227.05px);
+  overflow: visible;
+}
+.rectangle-1 {
+  background: linear-gradient(
+    -90deg,
+    rgba(0, 255, 25, 1) 0%,
+    rgba(10, 78, 0, 1) 100%
+  );
+  border-radius: 15px;
+  width: 521.6px;
+  height: 75px;
+  position: absolute;
+  left: -87px;
+  top: 935.45px;
+  transform-origin: 0 0;
+  transform: rotate(-47.319deg) scale(1, 1);
+}
+.rectangle-2 {
+  background: linear-gradient(
+    90deg,
+    rgba(0, 255, 25, 1) 0%,
+    rgba(9, 86, 1, 1) 100%
+  );
+  width: 278.6px;
+  height: 40.11px;
+  position: absolute;
+  left: 218px;
+  top: 170.55px;
+  transform-origin: 0 0;
+  transform: rotate(-43.152deg) scale(1, 1);
+}
+.polygon-3 {
+  border-radius: 0px;
+  width: 587px;
+  height: 366px;
+  position: absolute;
+  left: 40px;
+  top: 702px;
+  overflow: visible;
+}
+.email {
+  color: #087105;
+  text-align: left;
+  font-family: "Inter-Bold", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  position: absolute;
+  left: 40px;
+  top: 331px;
+}
+.password {
+  color: #087105;
+  text-align: left;
+  font-family: "Inter-Bold", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  position: absolute;
+  left: 40px;
+  top: 397px;
+}
+.confirm-password {
+  color: #087105;
+  text-align: left;
+  font-family: "Inter-Bold", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  position: absolute;
+  left: 40px;
+  top: 466px;
+}
+.welcome {
+  color: #095601;
+  text-align: left;
+  font-family: "Inter-Bold", sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  position: absolute;
+  left: 7px;
+  top: 57px;
+}
+.create-an-account {
+  color: #087105;
+  text-align: left;
+  font-family: "Inter-Bold", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  position: absolute;
+  left: 15px;
+  top: 188px;
+}
+.rectangle-3 {
+  background: #095601;
+  border-radius: 59px;
+  width: 305px;
+  height: 67px;
+  position: absolute;
+  left: 40px;
+  top: 641px;
+}
+.login {
+  color: #ffffff;
+  text-align: left;
+  font-family: "Inter-Bold", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  position: absolute;
+  left: 143px;
+  top: 655px;
+}
+.mdi-food {
+  width: 51px;
+  height: 51px;
+  position: absolute;
+  left: 364px;
+  top: 859px;
+  overflow: visible;
+  aspect-ratio: 1;
+}
+.famicons-eye {
+  width: 23px;
+  height: 23px;
+  position: absolute;
+  left: 279px;
+  top: 467px;
+  overflow: visible;
+  aspect-ratio: 1;
+}
+.famicons-eye2 {
+  width: 23px;
+  height: 23px;
+  position: absolute;
+  left: 279px;
+  top: 395px;
+  overflow: visible;
+  aspect-ratio: 1;
+}
+.material-symbols-mail {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  left: 9px;
+  top: 266px;
+  overflow: visible;
+  aspect-ratio: 1;
+}
+.username {
+  color: #095601;
+  text-align: left;
+  font-family: "Inter-Bold", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  position: absolute;
+  left: 40px;
+  top: 270px;
+}
+.ic-baseline-password {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  left: 9px;
+  top: 361px;
+  aspect-ratio: 1;
+}
+.vector {
+  width: 4.67%;
+  height: 1.73%;
+  position: absolute;
+  right: 92.76%;
+  left: 2.57%;
+  bottom: 62.31%;
+  top: 35.96%;
+  overflow: visible;
+}
+.vector2 {
+  width: 5.14%;
+  height: 1.3%;
+  position: absolute;
+  right: 93.22%;
+  left: 1.64%;
+  bottom: 55.18%;
+  top: 43.52%;
+  overflow: visible;
+}
+.vector3 {
+  width: 5.14%;
+  height: 1.3%;
+  position: absolute;
+  right: 92.76%;
+  left: 2.1%;
+  bottom: 47.95%;
+  top: 50.76%;
+  overflow: visible;
+}
+.material-symbols-person {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  left: -261px;
+  top: 516px;
+  aspect-ratio: 1;
+}
+.already-have-an-account {
+  color: #095601;
+  text-align: left;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  position: absolute;
+  left: 21px;
+  top: 518px;
+}
+.sign-in {
+  color: #095601;
+  text-align: left;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  position: absolute;
+  left: 224px;
+  top: 518px;
+}
+<div class="i-phone-14-plus-2">
+  <img class="polygon-1" src="polygon-10.svg" />
+  <img class="polygon-2" src="polygon-20.svg" />
+  <div class="rectangle-1"></div>
+  <div class="rectangle-2"></div>
+  <img class="polygon-3" src="polygon-30.svg" />
+  <div class="email">Email</div>
+  <div class="password">Password</div>
+  <div class="confirm-password">Confirm password</div>
+  <div class="welcome">Welcome</div>
+  <div class="create-an-account">Create an account</div>
+  <div class="rectangle-3"></div>
+  <div class="login">Login</div>
+  <img class="mdi-food" src="mdi-food0.svg" />
+  <img class="famicons-eye" src="famicons-eye0.svg" />
+  <img class="famicons-eye2" src="famicons-eye1.svg" />
+  <img class="material-symbols-mail" src="material-symbols-mail0.svg" />
+  <div class="username">Username</div>
+  <div class="ic-baseline-password"></div>
+  <img class="vector" src="vector0.svg" />
+  <img class="vector2" src="vector1.svg" />
+  <img class="vector3" src="vector2.svg" />
+  <div class="material-symbols-person"></div>
+  <div class="already-have-an-account">Already have an account?</div>
+  <div class="sign-in">Sign in</div>
+</div>
